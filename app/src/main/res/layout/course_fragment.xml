@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.course.CourseFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gdStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="20dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gdEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="20dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gdTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="10dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/titleTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sfprodisplay_regular"
+            android:text="@string/courses"
+            android:textColor="@color/black"
+            android:textSize="42sp"
+            app:layout_constraintEnd_toEndOf="@id/gdEnd"
+            app:layout_constraintStart_toStartOf="@id/gdStart"
+            app:layout_constraintTop_toTopOf="@id/gdTop" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/newCoursesRecyclerView"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="@id/gdEnd"
+            app:layout_constraintStart_toStartOf="@id/gdStart"
+            app:layout_constraintTop_toBottomOf="@id/titleTxtView" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/activeCoursesRecyclerView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="@id/gdEnd"
+            app:layout_constraintStart_toStartOf="@id/gdStart"
+            android:nestedScrollingEnabled="false"
+            app:layout_constraintTop_toBottomOf="@id/newCoursesRecyclerView"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

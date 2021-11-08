@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="400dp"
+    android:layout_height="105dp"
+    android:layout_marginTop="100dp"
+    app:cardCornerRadius="25dp"
+    app:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/activeCourseLayout"
+        android:layout_width="400dp"
+        android:layout_height="105dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/CardView"
+            android:layout_width="59dp"
+            android:layout_height="57dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            app:cardCornerRadius="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ImgView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/titleTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/sfprodisplay_regular"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/CardView"
+            app:layout_constraintTop_toTopOf="@id/CardView"
+            tools:text="Android" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/bookingTimeTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/sfprodisplay_regular"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/CardView"
+            app:layout_constraintTop_toBottomOf="@id/titleTxtView"
+            app:layout_constraintBottom_toBottomOf="@id/CardView"
+            tools:text="Booked for8 PM" />
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/playBtn"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:progress="60"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.75"
+            app:layout_constraintStart_toEndOf="@+id/bookingTimeTxtView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

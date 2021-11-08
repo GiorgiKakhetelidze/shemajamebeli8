@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">shemajamebeli8</string>
+    <string name="courses">Courses</string>
+    <string name="start">Start</string>
+    <string name="notification">notification</string>
+    <string name="home">home</string>
+    <string name="love">love</string>
+</resources>

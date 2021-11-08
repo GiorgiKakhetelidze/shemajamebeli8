@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Tab" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:textSize">8sp</item>
+    </style>
+    <style name="Tab.Active">
+        <item name="android:textColor">?attr/colorPrimary</item>
+    </style>
+
+    <style name="Tab.Inactive">
+        <item name="android:textColor">@color/nav_bar_btn_grey</item>
+    </style>
+</resources>

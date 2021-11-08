@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="150dp"
+    android:layout_height="210dp"
+    app:cardCornerRadius="25dp"
+    app:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/newCourseLayout"
+        android:layout_width="150dp"
+        android:layout_height="210dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iconImgView"
+            android:layout_width="14dp"
+            android:layout_height="10dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="30dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/titleTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sfprodisplay_regular"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/iconImgView"
+            app:layout_constraintStart_toEndOf="@+id/iconImgView"
+            app:layout_constraintTop_toTopOf="@+id/iconImgView"
+            tools:text="Introduce" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/questeionTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="28dp"
+            android:fontFamily="@font/sfprodisplay_regular"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iconImgView"
+            tools:text="Question" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/durationTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="9dp"
+            android:fontFamily="@font/sfprodisplay_regular"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/questeionTxtView"
+            tools:text="20 Min" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/playImgView"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="20dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/durationTxtView"
+            app:srcCompat="@drawable/play_btn" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/startTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sfprodisplay_regular"
+            android:text="@string/start"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/playImgView"
+            app:layout_constraintStart_toEndOf="@+id/playImgView"
+            app:layout_constraintTop_toBottomOf="@+id/playImgView"
+            app:layout_constraintTop_toTopOf="@+id/playImgView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
